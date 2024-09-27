@@ -180,3 +180,18 @@ void clearInputBuffer() {
     cin.clear(); // Clear error state
     cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
 }
+/*
+Test Runs:
+Car ID   Model          Manufacturer   Quantity   Price
+MP127KZ  RX5           Ford               10      12000.00
+MP12RKZ  RX6           Toyota             20      15000.00
+
+Invalid Records:
+35KMOP32   RX3  Lexus 5 3000.00   Invalid ID length; price must be above $11,400.00; 
+123XYZ     KD8  Subaru 0 11000.00   ID must start with two alphabetic characters (no 'O'); price must be above $11,400.00; 
+XX123Y     Accord  Honda 3 12000.00   ID must be 6 characters; 
+A12345B    Mustang  Ford 15 15000.00   ID must be 6 characters; 
+OO123A     Tucson  Hyundai 10 11500.00   ID must start with two alphabetic characters (no 'O'); 
+ZK1234B    Civic  Honda 12 8000.00   Price must be above $11,400.00; 
+
+*/
